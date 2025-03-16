@@ -1,0 +1,85 @@
+20250215	10:52:43	861edce6-1e85-480c-a5d1-b50fb928dc9c	Error: Not allowed by CORS	OPTIONS	/auth	http://localhost:3000
+20250215	11:06:47	ba0a9184-a3bc-4569-bb08-3ec376310ad0	Error: Not allowed by CORS	OPTIONS	/auth	http://localhost:3000
+20250215	14:31:37	9a17b807-6917-4a26-878c-af0a5a56a970	MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/	GET	/notes	http://localhost:3000
+20250216	12:51:47	75f2c1be-d15a-46e9-9623-86408581fb34	Error: Not allowed by CORS	OPTIONS	/users	http://localhost:3001
+20250216	12:52:52	0e5c11d7-fcce-4e81-b88c-6a09612bd950	Error: Not allowed by CORS	OPTIONS	/users	http://localhost:3001
+20250216	12:53:40	235278bb-a315-404c-adab-8cf39a71f5aa	Error: Not allowed by CORS	OPTIONS	/users	http://localhost:3001
+20250216	12:54:09	ffaf171b-28aa-42bb-aa65-dc8eeeb8ce5e	Error: Not allowed by CORS	OPTIONS	/users	http://localhost:3001
+20250216	13:19:35	0d7a26cb-c891-424f-981f-14d88e05d1b2	ReferenceError: roles is not defined	POST	/register	http://localhost:3001
+20250216	13:20:13	4fe20ee1-f64c-479d-b71a-eeabe06a8496	ReferenceError: roles is not defined	POST	/register	http://localhost:3001
+20250216	13:23:27	34e597d4-1e64-4fdb-863f-f031072b3d66	ValidationError: User validation failed: firstName: Path `firstName` is required.	POST	/register	http://localhost:3001
+20250216	13:24:26	549c618c-3a56-4622-a59b-d9e80cc0b0b9	ValidationError: User validation failed: firstName: Path `firstName` is required.	POST	/register	http://localhost:3001
+20250217	16:28:59	d6013da1-f6f0-4f16-a073-94c311c76f58	MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/	POST	/auth	http://localhost:3001
+20250217	16:29:09	b78e475e-3ce3-453a-8bba-ec5044571c9c	MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/	POST	/auth	http://localhost:3001
+20250217	16:29:49	c105603d-03a0-4c7e-b344-6382d44eda25	MongooseServerSelectionError: connection timed out	POST	/auth	http://localhost:3001
+20250217	16:30:03	23616d12-c8d3-4ee1-b213-e76099d7d6c6	MongooseServerSelectionError: connection timed out	POST	/auth	http://localhost:3001
+20250217	16:30:39	eb508f62-b9a0-4905-b135-3c984c8b339b	MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/	POST	/auth	http://localhost:3001
+20250217	16:36:20	783555b4-5e07-4f6e-9feb-384533dc33e6	MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/	POST	/auth	http://localhost:3001
+20250217	16:38:22	00c1619e-9c17-440d-a22a-fe8697c6ee33	MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/	POST	/auth	http://localhost:3001
+20250217	16:39:09	05f6c853-82b5-4cc8-a8c3-cb017d8bdc21	MongooseServerSelectionError: getaddrinfo EAI_AGAIN testdand-shard-00-01.715kb.mongodb.net	POST	/auth	http://localhost:3001
+20250217	16:39:32	5b6c0cb3-8848-4d2a-9ae1-9e5fa256067b	MongooseServerSelectionError: getaddrinfo EAI_AGAIN testdand-shard-00-01.715kb.mongodb.net	POST	/auth	http://localhost:3001
+20250217	16:41:23	702c9050-0897-4ff3-81c0-14ecaaab77d1	MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/	POST	/auth	http://localhost:3001
+20250217	16:41:37	2ff76c8b-8035-422c-a4c0-45e7453643bb	MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/	POST	/auth	http://localhost:3001
+20250217	19:03:40	b58dbf06-a417-4830-a6d4-a05ad119a400	MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/	POST	/auth	http://localhost:3001
+20250220	10:30:07	96b11004-2052-46eb-84be-7f1d5b3e027d	ValidationError: Client validation failed: country: Cast to string failed for value "{ value: 'AT', label: 'Австрия' }" (type Object) at path "country"	POST	/register	http://localhost:3000
+20250223	12:54:47	b26a18b0-4658-43b2-bec7-d2eb716857be	TypeError: Cannot read properties of undefined (reading 'UserInfo')	GET	/account	http://localhost:3000
+20250223	12:55:20	8426f19d-f19a-4c69-96a7-7e4238e134d8	TypeError: Cannot read properties of undefined (reading 'UserInfo')	GET	/account	http://localhost:3000
+20250223	12:55:38	8c82e3c6-ef42-4fdd-8a4f-9ead4332970e	TypeError: Cannot read properties of undefined (reading 'UserInfo')	GET	/account	http://localhost:3000
+20250223	12:55:48	44d8c17f-e683-46d9-ab2d-3bc9ecff49d4	TypeError: Cannot read properties of undefined (reading 'UserInfo')	GET	/account	http://localhost:3000
+20250223	12:58:16	db4302ae-91c4-421b-b907-7cda9a0080ec	TypeError: Cannot read properties of undefined (reading 'UserInfo')	GET	/account	http://localhost:3000
+20250223	13:01:05	132fd8e0-3ddd-44bc-8dd8-f4ac120caddd	TypeError: Cannot read properties of undefined (reading 'UserInfo')	GET	/account	http://localhost:3000
+20250223	13:02:39	874fc6b4-9f00-4cb3-a841-b39f530e25f3	TypeError: Cannot destructure property 'username' of '(intermediate value)' as it is undefined.	GET	/account	http://localhost:3000
+20250223	13:04:59	820f59c2-472e-4218-9d43-dc91fa879703	TypeError: Cannot destructure property 'username' of '(intermediate value)' as it is undefined.	GET	/account	http://localhost:3000
+20250223	16:36:13	add0708f-44e3-41d5-91df-6a5e6abc0ef9	TypeError: Cannot destructure property 'username' of '(intermediate value)' as it is undefined.	GET	/account	http://localhost:3000
+20250223	17:17:15	49578df1-0668-4e85-b9b7-66a2eaafab1f	TypeError: Cannot destructure property 'email' of '(intermediate value)' as it is undefined.	GET	/account	http://localhost:3000
+20250223	17:21:27	983101e0-b67b-4304-b2ea-c105eb1d57b7	TypeError: Cannot destructure property 'email' of '(intermediate value)' as it is undefined.	GET	/account	http://localhost:3000
+20250223	17:22:30	43a734ca-0e5b-4316-8c74-e57c326d5131	TypeError: Cannot destructure property 'email' of '(intermediate value)' as it is undefined.	GET	/account	http://localhost:3000
+20250223	17:40:06	bf221b40-031d-4b04-94ae-2797a36e2859	TypeError: Cannot destructure property 'email' of '(intermediate value)' as it is undefined.	GET	/account	http://localhost:3000
+20250223	17:43:50	ca1b4722-2b22-4702-a7f2-45fb0ee4868c	ReferenceError: rea is not defined	GET	/account	http://localhost:3000
+20250223	17:49:53	e5ba28ac-41cc-4440-921d-1e8ed7b5eb5c	MongooseError: Query was already executed: Client.findOne({ email: undefined })	GET	/account	http://localhost:3000
+20250223	19:17:46	74c30fb0-1d8b-4f74-b320-4ec90c44d1ec	TypeError: Cannot destructure property 'email' of '(intermediate value)' as it is undefined.	GET	/account	http://localhost:3000
+20250223	19:17:46	de7e622b-32c1-4b67-bedf-16b58277f38a	TypeError: Cannot destructure property 'email' of '(intermediate value)' as it is undefined.	GET	/account	http://localhost:3000
+20250223	19:18:04	2c83fef0-d722-44af-92e0-a21bd0e92398	TypeError: Cannot destructure property 'email' of '(intermediate value)' as it is undefined.	GET	/account	http://localhost:3000
+20250223	19:18:04	868c2dce-400c-49e6-8ce4-538275631251	TypeError: Cannot destructure property 'email' of '(intermediate value)' as it is undefined.	GET	/account	http://localhost:3000
+20250223	19:18:10	cdb5f48f-2818-42fe-94d3-2d2181df8ba6	TypeError: Cannot destructure property 'email' of '(intermediate value)' as it is undefined.	GET	/account	http://localhost:3000
+20250223	19:18:10	488ceca2-1121-4428-83bd-aacac1c5db25	TypeError: Cannot destructure property 'email' of '(intermediate value)' as it is undefined.	GET	/account	http://localhost:3000
+20250223	23:30:18	23667d2b-196b-4275-8a84-fd671c859f5f	TypeError: Cannot destructure property 'email' of '(intermediate value)' as it is undefined.	GET	/account	http://localhost:3000
+20250223	23:30:18	3c01b124-ad81-4010-a004-0cbc2e45fce0	TypeError: Cannot destructure property 'email' of '(intermediate value)' as it is undefined.	GET	/account	http://localhost:3000
+20250223	23:31:23	50c0d814-7c00-437d-be89-35a29d2094c9	TypeError: Cannot destructure property 'email' of '(intermediate value)' as it is undefined.	GET	/account	http://localhost:3000
+20250223	23:31:24	41f5c19b-460a-42d2-9a62-b0e607d53031	TypeError: Cannot destructure property 'email' of '(intermediate value)' as it is undefined.	GET	/account	http://localhost:3000
+20250226	17:33:20	da70310a-a95e-4a4c-937f-8fadf088e09b	ReferenceError: Cannot access 'updatedClient' before initialization	PATCH	/account	http://localhost:3000
+20250226	17:33:37	e4fa53da-29c4-4396-bb3b-4591809bcfda	ReferenceError: Cannot access 'updatedClient' before initialization	PATCH	/account	http://localhost:3000
+20250226	18:12:22	65c26363-39fb-44a4-b973-0504dfb155c1	TypeError: client.save is not a function	PATCH	/account	http://localhost:3000
+20250226	18:15:10	9d9dc285-034b-4ca2-ad5a-4ed265f01ac7	TypeError: client.save is not a function	PATCH	/account	http://localhost:3000
+20250226	18:20:04	d0739a05-4e29-43c5-b6d0-69e765e3ae4c	TypeError: client.save is not a function	PATCH	/account	http://localhost:3000
+20250226	18:23:13	3bcdc31d-0ac4-459b-80e9-1b4ab92a223e	TypeError: client.save is not a function	PATCH	/account	http://localhost:3000
+20250312	03:18:50	922e95fd-5876-478a-a263-ea30358828ff	Error: Not allowed by CORS	GET	/auth/refresh	http://194.102.104.92:3000
+20250312	03:19:03	ab55145c-e1f0-4a22-a719-9196acb06829	Error: Not allowed by CORS	OPTIONS	/auth	http://194.102.104.92:3000
+20250315	16:29:01	d66eacfd-0cc8-4833-8f8a-7cce01d41099	Error: Not allowed by CORS	GET	/static/media/cryptocoins.2b7de9e8fb2b048caf7a.woff2	http://localhost:3568
+20250315	16:29:01	dfbe8d2d-2dd9-4d7f-a199-519eef47089f	Error: Not allowed by CORS	GET	/static/media/icofont.9c33516aab48c61e3081.woff2	http://localhost:3568
+20250315	16:29:01	041cf275-9aed-4877-b93f-faa81e1d95a9	Error: Not allowed by CORS	GET	/static/media/fa-solid-900.3ceb50e7bcafb577367c.woff2	http://localhost:3568
+20250315	16:29:01	f7607d7b-e590-418b-9a1e-77a63ca71768	Error: Not allowed by CORS	GET	/static/media/cryptocoins.308e71252402ca448d41.woff	http://localhost:3568
+20250315	16:29:01	cc2a865b-6daf-4277-be6b-6ab7efeecb69	Error: Not allowed by CORS	GET	/static/media/icofont.dad3accba068281878f1.woff	http://localhost:3568
+20250315	16:29:01	88ee0fab-8d0b-4ac4-9486-5fd90a74efd9	Error: Not allowed by CORS	GET	/static/media/fa-solid-900.46fdbd2d897f8824e63c.woff	http://localhost:3568
+20250315	16:29:01	793a1983-6481-4a62-a639-b9f8e714fd28	Error: Not allowed by CORS	GET	/static/media/cryptocoins.c6162c158264668f0344.ttf	http://localhost:3568
+20250315	16:29:01	d856e262-6524-4a96-ac7e-d5a5754117f1	Error: Not allowed by CORS	GET	/static/media/fa-solid-900.10ecefc282f2761808bf.ttf	http://localhost:3568
+20250315	16:33:06	2a83003c-825d-4847-a53b-4712d55d7204	Error: Not allowed by CORS	GET	/static/media/cryptocoins.2b7de9e8fb2b048caf7a.woff2	http://localhost:3568
+20250315	16:33:06	642db3ff-5f22-41ae-a185-ff3e7afad512	Error: Not allowed by CORS	GET	/static/media/icofont.9c33516aab48c61e3081.woff2	http://localhost:3568
+20250315	16:33:06	a8fad336-fc1e-408b-a89a-6a913512cf1f	Error: Not allowed by CORS	GET	/static/media/fa-solid-900.3ceb50e7bcafb577367c.woff2	http://localhost:3568
+20250315	16:33:06	fa7ea18b-40b0-4f2f-8206-d177abdff279	Error: Not allowed by CORS	GET	/static/media/cryptocoins.308e71252402ca448d41.woff	http://localhost:3568
+20250315	16:33:06	ae3728df-16f0-4260-b410-ac4552319a6b	Error: Not allowed by CORS	GET	/static/media/icofont.dad3accba068281878f1.woff	http://localhost:3568
+20250315	16:33:06	8062977f-c4a0-453a-8c43-b301b81d1c03	Error: Not allowed by CORS	GET	/static/media/fa-solid-900.46fdbd2d897f8824e63c.woff	http://localhost:3568
+20250315	16:33:06	516c9bf9-6344-40bf-b6bb-d692466023b2	Error: Not allowed by CORS	GET	/static/media/cryptocoins.c6162c158264668f0344.ttf	http://localhost:3568
+20250315	16:33:06	6010d8a2-2800-40f9-bbec-b3127c3f1c3c	Error: Not allowed by CORS	GET	/static/media/fa-solid-900.10ecefc282f2761808bf.ttf	http://localhost:3568
+20250315	16:33:09	b816558c-14b5-44f9-896f-a12108bcb8a6	Error: Not allowed by CORS	GET	/static/media/cryptocoins.2b7de9e8fb2b048caf7a.woff2	http://localhost:3568
+20250315	16:33:09	ed15eb05-8648-4f54-8fe9-dd9c8454806f	Error: Not allowed by CORS	GET	/static/media/icofont.9c33516aab48c61e3081.woff2	http://localhost:3568
+20250315	16:33:09	4acfeaf8-a27c-468b-bcf6-7fce07d5912b	Error: Not allowed by CORS	GET	/static/media/fa-solid-900.3ceb50e7bcafb577367c.woff2	http://localhost:3568
+20250315	16:33:09	4e95124c-226b-4eeb-8de3-7de1c231908e	Error: Not allowed by CORS	GET	/static/media/cryptocoins.308e71252402ca448d41.woff	http://localhost:3568
+20250315	16:33:09	c6618de5-aeec-4c5c-aa54-79dda6e4c5d2	Error: Not allowed by CORS	GET	/static/media/icofont.dad3accba068281878f1.woff	http://localhost:3568
+20250315	16:33:09	d05bbb6d-60ee-43c1-bf03-e72acac2fdea	Error: Not allowed by CORS	GET	/static/media/fa-solid-900.46fdbd2d897f8824e63c.woff	http://localhost:3568
+20250315	16:33:09	ecaa4297-69d6-4650-8810-3bbaffd15a75	Error: Not allowed by CORS	GET	/static/media/cryptocoins.c6162c158264668f0344.ttf	http://localhost:3568
+20250315	16:33:09	4415852d-fc36-4e97-a0e6-d893fb9fed5b	Error: Not allowed by CORS	GET	/static/media/fa-solid-900.10ecefc282f2761808bf.ttf	http://localhost:3568
+20250315	21:05:49	27e78ef5-5ef0-4469-bc4a-18d2970da042	Error: Cannot set headers after they are sent to the client	POST	/api/auth	http://localhost:3568
+20250315	21:06:21	4b545009-4e66-4fb9-9897-fa8b24b826c1	Error: Cannot set headers after they are sent to the client	POST	/api/auth	http://localhost:3568
+20250315	21:06:56	5728d6a3-07c9-4098-aa90-5a96b67a53b3	Error: Cannot set headers after they are sent to the client	POST	/api/auth	http://localhost:3568
+20250315	21:08:06	2725e98e-4574-4da5-b1f8-25ac279830a6	Error: Cannot set headers after they are sent to the client	POST	/api/auth	http://localhost:3568
