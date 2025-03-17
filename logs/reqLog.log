@@ -8287,3 +8287,9 @@
 20250318	00:08:57	d5c03fa9-9ce9-4d31-a901-ce7f52ed3e80	GET	/api/clients	http://localhost:3000
 20250318	00:09:34	8c1d9f0c-89c8-4f53-badf-568f65ed9ab5	OPTIONS	/api/clients	http://localhost:3000
 20250318	00:09:34	a647e6d3-ba27-4b19-95db-367730c2e0e9	GET	/api/clients	http://localhost:3000
+20250318	00:28:10	c0cacf53-da6e-4d81-91e9-8e60ac70e1e0	GET	/	undefined
+20250318	00:28:10	a0d790d1-2b2a-4a50-bdd0-0f425fab8dd8	GET	/static/js/main.d97d3fe7.js	undefined
+20250318	00:28:10	1fcc63e6-3883-49a1-afa9-f6db57e45ec5	GET	/static/css/main.65f2b118.css	undefined
+20250318	00:28:15	96b05fd6-e750-4445-a749-23acae2e5a87	GET	/	undefined
+20250318	00:28:15	6029765d-e23b-47ed-9693-7234d967bee9	GET	/static/css/main.65f2b118.css	undefined
+20250318	00:28:15	634697e8-16ab-42fe-a3ab-3f1d7befb824	GET	/static/js/main.d97d3fe7.js	undefined

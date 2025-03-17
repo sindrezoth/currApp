@@ -35,8 +35,13 @@ app.get('/terms-of-use', (req, res) => {
   res.sendFile(path.join(__dirname, 'Terms of Use.txt'));
 })
 
-app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(path.join(__dirname, 'build/client')));
 app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
+app.use(express.static(path.join(__dirname, 'build/admin')));
+app.get('/admin', (req, res) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
