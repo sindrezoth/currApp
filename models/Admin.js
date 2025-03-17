@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const clientSchema = new mongoose.Schema({
+const adminSchema = new mongoose.Schema({
   username: {
     type: String,
     required: true
@@ -19,4 +19,10 @@ const clientSchema = new mongoose.Schema({
   }
 })
 
-module.exports = mongoose.model('Admin', clientSchema);
+adminSchema.virtual('tradered', {
+  ref: 'Invest',
+  localField: '_id',
+  foreignField: 'admin'
+});
+
+module.exports = mongoose.model('Admin', adminSchema);

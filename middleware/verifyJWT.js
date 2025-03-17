@@ -2,13 +2,17 @@ const jwt = require('jsonwebtoken')
 
 const verifyJWT = (req, res, next) => {
   const authHeader = req.headers.authorization || req.headers.Authorization;
-  //console.log(req.headers);
+  const cookies = req.headers.cookie;
 
-  if (!authHeader?.startsWith('Bearer ')) {
+  let token;
+
+  if(authHeader.startWith && authHeader.startWith('Bearer ')) {
+    token = authHeader.split(' ')[1];
+  } else if (cookies?.includes('jwt')) {
+    token = cookies.slice(4);
+  } else {
     return res.status(401).json({ message: 'Unauthorized' });
   }
-
-  const token = authHeader.split(' ')[1];
 
   jwt.verify(
     token,

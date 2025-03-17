@@ -83,3 +83,49 @@
 20250315	21:06:21	4b545009-4e66-4fb9-9897-fa8b24b826c1	Error: Cannot set headers after they are sent to the client	POST	/api/auth	http://localhost:3568
 20250315	21:06:56	5728d6a3-07c9-4098-aa90-5a96b67a53b3	Error: Cannot set headers after they are sent to the client	POST	/api/auth	http://localhost:3568
 20250315	21:08:06	2725e98e-4574-4da5-b1f8-25ac279830a6	Error: Cannot set headers after they are sent to the client	POST	/api/auth	http://localhost:3568
+20250316	17:16:55	4dbefdff-acc7-4dae-93e1-5530294ef1c0	Error: Invalid select: select only takes 1 argument	GET	/api/account	http://localhost:3000
+20250316	17:16:55	d5dea51d-f4c0-4455-be9f-463ccfb9cf31	Error: Invalid select: select only takes 1 argument	GET	/api/account	http://localhost:3000
+20250316	22:46:29	2648e51d-7d19-4690-b266-b3fd5ccb54b2	Error: Not allowed by CORS	OPTIONS	/api/auth	http://194.102.104.92:3568
+20250316	22:49:26	7a0c2d2f-0a06-4d86-a4ac-e6d22fe2db1e	Error: Not allowed by CORS	GET	/api/auth/refresh	http://194.102.104.92:3568
+20250317	10:09:54	f3f68a95-b909-4c1a-aed5-0da2b2210959	Error: Not allowed by CORS	GET	/static/media/cryptocoins.2b7de9e8fb2b048caf7a.woff2	http://localhost:3568
+20250317	10:09:54	c93170fa-d439-4591-acb7-25942bc32dd2	Error: Not allowed by CORS	GET	/static/media/icofont.9c33516aab48c61e3081.woff2	http://localhost:3568
+20250317	10:09:54	551442d8-089a-413b-a45f-a28a1f77c1c5	Error: Not allowed by CORS	GET	/static/media/fa-solid-900.3ceb50e7bcafb577367c.woff2	http://localhost:3568
+20250317	10:09:54	8baa9901-206e-4f7c-bb6c-c8f856f8d2ac	Error: Not allowed by CORS	GET	/static/media/cryptocoins.308e71252402ca448d41.woff	http://localhost:3568
+20250317	10:09:54	03f2e708-442a-428f-96e6-a0e17350798e	Error: Not allowed by CORS	GET	/static/media/fa-solid-900.46fdbd2d897f8824e63c.woff	http://localhost:3568
+20250317	10:09:54	0d4316e0-52b7-4cd5-966b-9e831b208211	Error: Not allowed by CORS	GET	/static/media/cryptocoins.c6162c158264668f0344.ttf	http://localhost:3568
+20250317	10:09:54	2006df89-324a-462d-af30-2f552c6b2cd4	Error: Not allowed by CORS	GET	/static/media/icofont.dad3accba068281878f1.woff	http://localhost:3568
+20250317	10:09:54	0f1259fc-c426-4bfe-882c-2267423093e4	Error: Not allowed by CORS	GET	/static/media/fa-solid-900.10ecefc282f2761808bf.ttf	http://localhost:3568
+20250317	10:10:03	07431bcb-a81d-40e0-8e1a-717e10d9a1b3	Error: Not allowed by CORS	POST	/api/auth/logout	http://localhost:3568
+20250317	10:10:30	3f66a8b3-4b98-4294-ad19-bfaffffd8391	Error: Not allowed by CORS	POST	/api/register	http://localhost:3568
+20250317	11:54:40	a29d9091-5172-4485-8e42-a9400f1388af	TypeError: res.sendText is not a function	GET	/privacy-policy	undefined
+20250317	11:55:43	dfe0001b-d026-492d-ac2d-773f1e13db4d	TypeError: res.text is not a function	GET	/privacy-policy	undefined
+20250317	11:58:05	3a54dc0d-e914-40cd-85be-0448b1daa239	TypeError: res.set is not a function	GET	/privacy-policy	undefined
+20250317	11:58:50	906e7967-7f40-48c9-8952-37ecbadd2d72	TypeError: res.send is not a function	GET	/privacy-policy	undefined
+20250317	12:01:57	8bb50b66-e24b-4f75-8820-48a3ce327d9c	TypeError: res.type is not a function	GET	/privacy-policy	undefined
+20250317	12:03:58	15006888-7b2e-412a-9bcf-a28489668ded	TypeError: res.type is not a function	GET	/privacy-policy	undefined
+20250317	12:57:06	c64f5b61-7184-44e9-86ec-5fab72afa6f7	Error: ENOENT: no such file or directory, stat '/home/sindrezoth/main/projects/currencyApp/backend/build/Privacy Policy.txt'	GET	/privacy-policy	undefined
+20250317	13:05:12	925acc0f-c948-4752-8940-80f07c8ddf4d	Error: ENOENT: no such file or directory, stat '/home/sindrezoth/main/projects/currencyApp/backend/Term of Use.txt'	GET	/term-of-use	undefined
+20250317	15:59:45	0c6d8da1-4db6-4825-9deb-541288a13325	TypeError: authHeader?.startWith is not a function	GET	/api/clients	http://localhost:3000
+20250317	15:59:53	b2fddba6-d77c-41bb-8ce3-9119291566ed	TypeError: authHeader?.startWith is not a function	GET	/api/clients	http://localhost:3000
+20250317	16:00:53	f70261a8-76c1-4853-afb8-3dd52de6fa5e	TypeError: authHeader?.startWith is not a function	GET	/api/clients	http://localhost:3000
+20250317	16:01:53	d836fd9b-bcbe-47bf-b8e8-324c4f66ebc8	TypeError: authHeader?.startWith is not a function	GET	/api/clients	http://localhost:3000
+20250317	16:02:53	6c50c268-cff3-4d29-a413-84a896fa3ee6	TypeError: authHeader?.startWith is not a function	GET	/api/clients	http://localhost:3000
+20250317	16:03:44	ff1b29d0-4783-44b5-9eb1-5447882b7489	TypeError: authHeader?.startWith is not a function	GET	/api/clients	http://localhost:3000
+20250317	16:03:54	229d3059-f6b0-4a1a-9387-3ebc9deb1465	TypeError: authHeader?.startWith is not a function	GET	/api/clients	http://localhost:3000
+20250317	16:04:03	2f3583b9-954b-4eda-8caa-a12e19aa8a45	TypeError: authHeader?.startWith is not a function	GET	/api/clients	http://localhost:3000
+20250317	16:05:04	9db47cfc-af8d-4078-a2c0-102c88c8d654	TypeError: authHeader?.startWith is not a function	GET	/api/clients	http://localhost:3000
+20250317	16:06:04	f1212641-6dcf-42f1-a4a4-85b29d45bdc8	TypeError: authHeader?.startWith is not a function	GET	/api/clients	http://localhost:3000
+20250317	16:07:04	162e0ed8-4d6b-4399-827d-1e811c9bf5c2	TypeError: authHeader?.startWith is not a function	GET	/api/clients	http://localhost:3000
+20250317	16:07:21	e63ba53a-d0ec-4407-afac-0f6114b3c06b	TypeError: authHeader?.startWith is not a function	GET	/api/clients	http://localhost:3000
+20250317	16:08:37	e3cc8d38-e8d3-4e49-adb1-835919a27ca3	TypeError: authHeader?.startWith is not a function	GET	/api/clients	http://localhost:3000
+20250317	16:09:37	2d16625c-2070-4698-9250-241972a90ee4	TypeError: authHeader?.startWith is not a function	GET	/api/clients	http://localhost:3000
+20250317	16:10:37	fc23f519-0f38-4aaa-9c2b-748b465334cb	TypeError: authHeader?.startWith is not a function	GET	/api/clients	http://localhost:3000
+20250317	16:11:38	af7e489d-e97e-445c-9c27-5a4b24d376f2	TypeError: authHeader?.startWith is not a function	GET	/api/clients	http://localhost:3000
+20250317	16:12:38	8392158c-1b19-4e13-b8ea-00a68c5098e8	TypeError: authHeader?.startWith is not a function	GET	/api/clients	http://localhost:3000
+20250317	17:55:03	5fe922a2-82b4-4e05-8ba6-4762dc5cbca2	TypeError: Cannot read properties of undefined (reading 'startWith')	GET	/api/clients	undefined
+20250317	17:55:03	9f4db177-ab69-4c63-8a58-b084f9783835	TypeError: Cannot read properties of undefined (reading 'startWith')	GET	/favicon.ico	undefined
+20250317	17:55:11	2c56bfea-7747-4e7c-9fcd-b8bad7f16698	TypeError: Cannot read properties of undefined (reading 'startWith')	GET	/api/clients	undefined
+20250317	17:55:12	f266a9f1-2f42-41de-86ec-57b3c833a73b	TypeError: Cannot read properties of undefined (reading 'startWith')	GET	/favicon.ico	undefined
+20250317	17:55:14	d5cefc94-4dcf-4313-8360-96063ff12848	TypeError: Cannot read properties of undefined (reading 'startWith')	GET	/api/clients	undefined
+20250317	17:55:15	d1fd4c00-c313-4314-b6ce-2f7f9430bc36	TypeError: Cannot read properties of undefined (reading 'startWith')	GET	/favicon.ico	undefined
+20250317	17:55:28	602af9c3-d4f5-4152-9d40-80a99f6c1406	TypeError: Cannot read properties of undefined (reading 'startWith')	GET	/favicon.ico	undefined

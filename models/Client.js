@@ -32,6 +32,7 @@ const clientSchema = new mongoose.Schema({
   traderId: String,
   wallet: {
     type: [{
+      hash: String,
       currency: {
         type: String,
         enum: ['rub', 'usd']
@@ -40,25 +41,25 @@ const clientSchema = new mongoose.Schema({
     }],
     default: [{currency: 'usd', amount: 0}]
   },
-  invested: {
-    type: [{
-      id: String,
-      coin: {
-        type: String,
-        enum: ['btc','eth'],
-      },
-      invest:  {
-        currency: {
-          type: String,
-          enum: ['rub', 'usd']
-        },
-        amount: Number
-      },
-      difference: {
-        amount: Number
+  actions: {
+    type: [
+
+      {
+        action: String,
+        timestamp: {
+          type: Number,
+          default: () => Date.now()
+        }
       }
-    }],
-    default: []
+    ]
+  },
+  createdAt: {
+    type: Number,
+    default: () => Date.now()
+  },
+  updatedAt: {
+    type: Number,
+    default: () => Date.now()
   },
   verifyed: {
     Boolean,
@@ -72,6 +73,13 @@ const clientSchema = new mongoose.Schema({
     type: Boolean,
     default: false
   }
-})
+
+}, { timestamps: true });
+
+clientSchema.virtual('invested', {
+  ref: 'Invest',
+  localField: '_id',
+  foreignField: 'client'
+});
 
 module.exports = mongoose.model('Client', clientSchema)

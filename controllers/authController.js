@@ -46,14 +46,11 @@ const login = async (req, res) => {
 }
 
 const refresh = (req, res) => {
-  const cookies = req.cookies;
-  
+  const cookies = req.headers.cookie;
 
-  if (!cookies?.jwt) return res.status(401).json({ message: 'Unauthorized' });
+  if (!cookies?.includes('jwt')) return res.status(401).json({ message: 'Unauthorized' });
 
-  const refreshToken = cookies.jwt;
-
-
+  const refreshToken = cookies.slice(4);
 
   jwt.verify(
     refreshToken,

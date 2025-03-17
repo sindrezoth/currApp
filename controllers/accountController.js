@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt');
 
 const accountDetails = async (req, res) => {
   const email = req.client.email;
-  const client = await Client.findOne({ email }).select('-password').lean(); // Prevent picking password-field
+  const client = await Client.findOne({ email }).select(['-password', '-createdAt', '-updatedAt', '-actions', '-active']).lean(); // Prevent picking password-field
 
   if(!client) {
     res.status(404).json({ message: 'Cannot find client with this email: ' + email })
@@ -14,10 +14,10 @@ const accountDetails = async (req, res) => {
 }
 
 const updateAccount = async (req, res) => {
-  const { email, phone, country, firstname, lastname } = req.body;
-  console.log(req.body)
+  const { phone, country, firstname, lastname } = req.body;
+  const { email } = req.client;
 
-  if (!email || !phone || !country) {
+  if (!phone || !country) {
     return res.status(400).json({ message: 'Почта, телефон, и страна проживания должны быть заполнены.' });
   }
 

@@ -49,11 +49,10 @@ const login = async (req, res) => {
     res.json({ accessToken });
 }
 
-// @desc Refresh
-// @route GET /auth/refresh
-// @access Public - because access token has expired
 const refresh = (req, res) => {
+  console.log('asdfasdf')
   const cookies = req.cookies;
+  console.log('asdf')
   console.log(req.headers);
 
   if (!cookies?.jwt) return res.status(401).json({ message: 'Unauthorized' });
