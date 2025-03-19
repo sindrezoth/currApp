@@ -26,12 +26,10 @@ app.use(express.json())
 app.use(cookieParser())
 
 app.get('/privacy-policy', (req, res) => {
-  //res.json({message: 'asdfasdf'})
   res.sendFile(path.join(__dirname, 'Privacy Policy.txt'));
 })
 
 app.get('/terms-of-use', (req, res) => {
-  //res.json({message: 'asdfasdf'})
   res.sendFile(path.join(__dirname, 'Terms of Use.txt'));
 })
 
@@ -41,20 +39,18 @@ app.get('/', (req, res) => {
 });
 
 app.use(express.static(path.join(__dirname, 'build', 'admin')));
-app.get('/admin', (req, res) => {
+app.get('/admin/*', (req, res) => {
   res.sendFile(path.join(__dirname, 'build', 'admin', 'index.html'));
 });
 
+//app.use('/api', (req, res) => res.json({message: 'api'}))
 app.use('/api/auth', require('./routes/authRoutes'))
-
 
 app.use(verifyJWT);
 app.use('/api/account', require('./routes/accountRoutes'))
 app.use('/api/register', require('./routes/registerRoutes'))
 app.use('/api/clients', require('./routes/clientRoutes'))
-app.use('/api/adm/clients', require('./routes/admClientsRoutes'))
-app.use('/api/adm/admins', require('./routes/admAdminsRoutes'))
-
+app.use('/api/admins', require('./routes/adminRoutes'))
 
 app.use(errorHandler)
 

@@ -60,7 +60,9 @@ const login = async (req, res) => {
       return res.status(401).json({ message: 'Не авторизированный пользователь. Войдите в аккаунт.' });
     }
 
-    const match = password === foundAdmin.password; //await bcrypt.compare(password, foundAdmin.password);
+    const match = 
+      //password === foundAdmin.password; 
+      await bcrypt.compare(password, foundAdmin.password);
     if (!match) return res.status(401).json({ message: 'Неверный пароль.' });
 
     accessToken = jwt.sign(
@@ -93,6 +95,7 @@ const login = async (req, res) => {
 
 const refresh = (req, res) => {
   const cookies = req.headers.cookie;
+  const t = req.headers;
 
   if (!cookies && !cookies?.includes('jwt')) return res.status(401).json({ message: 'Не авторизированный пользователь. Войдите в аккаунт.' });
 

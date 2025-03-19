@@ -1,13 +1,9 @@
-const Client = require('../models/Client');
+const Admin = require('../models/Admin');
 const Note = require('../models/Note');
 const bcrypt = require('bcrypt');
 
-// @desc Get all users
-// @route GET /users
-// @access Private
-const getAllClients = async (req, res) => {
-    // Get all users from MongoDB
-    const users = await Client.find().lean(); // Prevent picking password-field
+const getAllAdmins = async (req, res) => {
+    const users = await Admin.find().lean(); // Prevent picking password-field
 
     // If no users 
     if (!users?.length) {
@@ -20,7 +16,7 @@ const getAllClients = async (req, res) => {
 // @desc Create new user
 // @route POST /users
 // @access Private
-const createNewClient = async (req, res) => {
+const createNewAdmin = async (req, res) => {
     const { username, password, roles } = req.body;
 
     // Confirm data
@@ -29,7 +25,7 @@ const createNewClient = async (req, res) => {
     }
 
     // Check for duplicate username
-    const duplicate = await Client.findOne({ username }).collation({ locale: 'en', strength: 2 }).lean().exec()
+    const duplicate = await Admin.findOne({ username }).collation({ locale: 'en', strength: 2 }).lean().exec()
 
     if (duplicate) {
         return res.status(409).json({ message: 'Duplicate username' })
@@ -43,7 +39,7 @@ const createNewClient = async (req, res) => {
         : { username, "password": hashedPwd, roles }
 
     // Create and store new user 
-    const user = await Client.create(userObject)
+    const user = await Admin.create(userObject)
 
     if (user) { //created 
         res.status(201).json({ message: `New user ${username} created` })
@@ -55,81 +51,77 @@ const createNewClient = async (req, res) => {
 // @desc Update a user
 // @route PATCH /users
 // @access Private
-const updateClient = async (req, res) => {
-    const { id, firstName, lastName, email, active, password, trader } = req.body
-  const client = req.body;
-  console.log(trader);
-
-    const updatedClient = await Client.findOneAndUpdate({ email }, { trader }, { new: true });
-  console.log(updatedClient)
-
-   return res.json({ message: `${updatedClient.username} updated` })
-   
+const updateAdmin = async (req, res) => {
+    const { id, firstName, lastName, username, roles, active, password, other } = req.body
 
     // Confirm data 
-    if (!id || typeof active !== 'boolean') {
+    if (!id || !username || !Array.isArray(roles) || !roles.length || typeof active !== 'boolean') {
         return res.status(400).json({ message: 'All fields except password are required' })
     }
 
     // Does the user exist to update?
-    const user = await Client.findById(id).exec()
+    const user = await Admin.findById(id).exec()
 
     if (!user) {
-        return res.status(400).json({ message: 'Client not found' })
+        return res.status(400).json({ message: 'Admin not found' })
     }
 
     // Check for duplicate 
-    const duplicate = await Client.findOne({ email }).exec()
+    const duplicate = await Admin.findOne({ username }).collation({ locale: 'en', strength: 2 }).lean().exec()
 
     // Allow updates to the original user 
     if (duplicate && duplicate?._id.toString() !== id) {
         return res.status(409).json({ message: 'Duplicate username' })
     }
 
-    const user2 = await Client.updateOne({ email }, { trader });
+    user.username = username
+    user.roles = roles
+    user.active = active
 
     if (password) {
         // Hash password 
         user.password = await bcrypt.hash(password, 10) // salt rounds 
     }
 
-    res.json({ message: `${updatedClient.username} updated` })
+    const updatedAdmin = await user.save()
+
+    res.json({ message: `${updatedAdmin.username} updated` })
 }
 
 // @desc Delete a user
 // @route DELETE /users
 // @access Private
-const deleteClient = async (req, res) => {
+const deleteAdmin = async (req, res) => {
     const { id } = req.body
 
     // Confirm data
     if (!id) {
-        return res.status(400).json({ message: 'Client ID Required' })
+        return res.status(400).json({ message: 'Admin ID Required' })
     }
 
     // Does the user still have assigned notes?
     const note = await Note.findOne({ user: id }).lean().exec()
     if (note) {
-        return res.status(400).json({ message: 'Client has assigned notes' })
+        return res.status(400).json({ message: 'Admin has assigned notes' })
     }
 
     // Does the user exist to delete?
-    const user = await Client.findById(id).exec()
+    const user = await Admin.findById(id).exec()
 
     if (!user) {
-        return res.status(400).json({ message: 'Client not found' })
+        return res.status(400).json({ message: 'Admin not found' })
     }
 
     const result = await user.deleteOne()
 
-    const reply = `Clientname ${result.username} with ID ${result._id} deleted`
+    const reply = `Adminname ${result.username} with ID ${result._id} deleted`
 
     res.json(reply)
 }
 
 module.exports = {
-    getAllClients,
-    createNewClient,
-    updateClient,
-    deleteClient
+    getAllAdmins,
+    createNewAdmin,
+    updateAdmin,
+    deleteAdmin
 }

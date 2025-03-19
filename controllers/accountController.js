@@ -5,7 +5,6 @@ const bcrypt = require('bcrypt');
 const accountDetails = async (req, res) => {
   const email = req.client.email;
   const client = await Client.findOne({ email }).select(['-password', '-createdAt', '-updatedAt', '-actions', '-active']).lean(); // Prevent picking password-field
-  console.log(client)
 
   if(!client) {
     res.status(404).json({ message: 'Невозможно найти пользователя с такой почтой: ' + email })

@@ -16,6 +16,9 @@ const adminSchema = new mongoose.Schema({
   active: {
     type: Boolean,
     default: true
+  },
+  attachedClients: {
+    type: mongoose.Schema.Types.ObjectId,
   }
 })
 
