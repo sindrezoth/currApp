@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
+const { Schema } = mongoose;
 
-const clientSchema = new mongoose.Schema({
+const clientSchema = new Schema({
   firstname: {
     type: String,
     required: false,
@@ -29,7 +30,6 @@ const clientSchema = new mongoose.Schema({
     value: String,
     required: true
   },
-  traderId: String,
   wallet: {
     type: [{
       hash: String,
@@ -40,6 +40,10 @@ const clientSchema = new mongoose.Schema({
       amount: Number
     }],
     default: [{currency: 'usd', amount: 0}]
+  },
+  scripts: {
+    type: [Schema.Types.ObjectId],
+    ref: 'Script'
   },
   actions: {
     type: [
@@ -72,9 +76,16 @@ const clientSchema = new mongoose.Schema({
   blocked: {
     type: Boolean,
     default: false
+  },
+  trader: {
+    type: Schema.Types.ObjectId,
+    ref: 'Admin'
+  },
+  deleted: {
+    type: Boolean,
+    deafult: false
   }
-
-}, { timestamps: true });
+});
 
 clientSchema.virtual('invested', {
   ref: 'Invest',

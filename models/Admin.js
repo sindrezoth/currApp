@@ -19,8 +19,9 @@ const adminSchema = new mongoose.Schema({
   },
   attachedClients: {
     type: mongoose.Schema.Types.ObjectId,
+    ref: 'Client'
   }
-})
+});
 
 adminSchema.virtual('tradered', {
   ref: 'Invest',

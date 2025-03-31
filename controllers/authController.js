@@ -97,6 +97,7 @@ const refresh = (req, res) => {
   const cookies = req.headers.cookie;
   const t = req.headers;
 
+  console.log('REFRESH')
   if (!cookies && !cookies?.includes('jwt')) return res.status(401).json({ message: 'Не авторизированный пользователь. Войдите в аккаунт.' });
 
   const refreshToken = cookies.slice(4);
@@ -147,7 +148,9 @@ const refresh = (req, res) => {
 const logout = (req, res) => {
   const cookies = req.cookies;
   if (!cookies?.jwt) return res.sendStatus(204);
-  res.clearCookie('jwt', { httpOnly: true, sameSite: 'None', secure: true });
+  res.clearCookie('jwt', { httpOnly: true, sameSite: 'None', 
+    //secure: true 
+    });
   res.json({ message: 'Куки очищенны.' });
 }
 

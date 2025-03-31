@@ -33,23 +33,31 @@ app.get('/terms-of-use', (req, res) => {
   res.sendFile(path.join(__dirname, 'Terms of Use.txt'));
 })
 
-app.use(express.static(path.join(__dirname, 'build', 'client')));
+app.use(express.static(path.join(__dirname, 'client', 'build')));
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'client', 'index.html'));
+  res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
 });
 
-app.use(express.static(path.join(__dirname, 'build', 'admin')));
+app.use(express.static(path.join(__dirname, 'admin', 'build')));
+app.get('/admin', (req, res) => {
+  res.sendFile(path.join(__dirname, 'admin', 'build', 'index.html'));
+});
+
+app.use(express.static(path.join(__dirname, 'admin', 'build')));
 app.get('/admin/*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'admin', 'index.html'));
+  res.sendFile(path.join(__dirname, 'admin', 'build', 'index.html'));
 });
 
 //app.use('/api', (req, res) => res.json({message: 'api'}))
+
+
 app.use('/api/auth', require('./routes/authRoutes'))
 
 app.use(verifyJWT);
 app.use('/api/account', require('./routes/accountRoutes'))
 app.use('/api/register', require('./routes/registerRoutes'))
 app.use('/api/clients', require('./routes/clientRoutes'))
+app.use('/api/scripts', require('./routes/scriptsRoutes'))
 app.use('/api/admins', require('./routes/adminRoutes'))
 
 app.use(errorHandler)

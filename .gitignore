@@ -1,3 +1,8 @@
 node_modules
+#admin/*
+#!admin/build
+
+#client/*
+#client/build
 
 .env

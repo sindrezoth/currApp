@@ -1,0 +1,7 @@
+diff --git a/node_modules/world-countries/index.mjs b/node_modules/world-countries/index.mjs
+index bd0bb83..f00112c 100644
+--- a/node_modules/world-countries/index.mjs
++++ b/node_modules/world-countries/index.mjs
+@@ -1 +1 @@
+-export { default } from './countries.json' assert { type: 'json' };
++export { default } from './countries.json' with { type: 'json' };

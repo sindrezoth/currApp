@@ -4,6 +4,7 @@ const jwt = require('jsonwebtoken');
 
 const register = async (req, res) => {
   const { email, password, phone, country } = req.body;
+  console.log(req.body);
 
   if (!email || !password || !phone || !country) {
     return res.status(400).json({ message: 'All fields are required' });
@@ -40,7 +41,7 @@ const register = async (req, res) => {
 
     res.cookie('jwt', refreshToken, {
       httpOnly: true,
-      secure: true,
+      //secure: true,
       sameSite: 'None',
       maxAge: 7 * 24 * 60 * 60 * 1000
     });
@@ -87,7 +88,9 @@ const refresh = (req, res) => {
 const logout = (req, res) => {
     const cookies = req.cookies;
     if (!cookies?.jwt) return res.sendStatus(204); //No content
-    res.clearCookie('jwt', { httpOnly: true, sameSite: 'None', secure: true });
+    res.clearCookie('jwt', { httpOnly: true, sameSite: 'None', 
+    //secure: true 
+    });
     res.json({ message: 'Cookie cleared' });
 }
 

@@ -1,0 +1,6 @@
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
