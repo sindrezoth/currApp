@@ -54,13 +54,13 @@ app.get('/admin/*', (req, res) => {
 app.use('/api/auth', require('./routes/authRoutes'))
 
 app.use(verifyJWT);
-app.use('/api/account', require('./routes/accountRoutes'))
-app.use('/api/register', require('./routes/registerRoutes'))
-app.use('/api/clients', require('./routes/clientRoutes'))
-app.use('/api/scripts', require('./routes/scriptsRoutes'))
-app.use('/api/admins', require('./routes/adminRoutes'))
+app.use('/api/account', require('./routes/accountRoutes'));
+app.use('/api/register', require('./routes/registerRoutes'));
+app.use('/api/clients', require('./routes/clientRoutes'));
+app.use('/api/scripts', require('./routes/scriptsRoutes'));
+app.use('/api/admins', require('./routes/adminRoutes'));
 
-app.use(errorHandler)
+app.use(errorHandler);
 
 mongoose.set('strictQuery', true);
 

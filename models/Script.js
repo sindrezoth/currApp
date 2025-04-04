@@ -15,11 +15,18 @@ const scriptSchema = new Schema({
       }, 
       username: String 
     },
+    creatorId: String,
+    clientId: String,
+    traderId: String,
+    client: {
+      type: Schema.Types.ObjectId,
+      ref: 'Client'
+    },
     trader: {
       type: Schema.Types.ObjectId,
       ref: 'Admin'
     },
-    clientEmail: String
+    clientEmail: String,
   },
   list: {
     type: [[Number, Number]]

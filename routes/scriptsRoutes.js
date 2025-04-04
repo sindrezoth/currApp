@@ -4,9 +4,9 @@ const scriptsController = require('../controllers/scriptsController.js');
 const verifyJWT = require('../middleware/verifyJWT.js');
 
 router.route('/')
-    //.get(clientController.getAllClients)
+    .get(scriptsController.getAllScripts)
     .post(scriptsController.createNewScript)
     //.patch(clientController.updateClient)
-    //.delete(clientController.deleteClient);
+    .delete(scriptsController.deleteScript);
 
 module.exports = router;

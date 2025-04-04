@@ -4,7 +4,6 @@ const jwt = require('jsonwebtoken');
 
 const register = async (req, res) => {
   const { email, password, phone, country } = req.body;
-  console.log(req.body);
 
   if (!email || !password || !phone || !country) {
     return res.status(400).json({ message: 'All fields are required' });
@@ -59,6 +58,7 @@ const refresh = (req, res) => {
   if (!cookies?.jwt) return res.status(401).json({ message: 'Unauthorized' });
 
   const refreshToken = cookies.jwt;
+  console.log(refreshToken)
 
   jwt.verify(
     refreshToken,

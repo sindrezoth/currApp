@@ -60,7 +60,10 @@ const updateClientNewTrader = async (req, res) => {
   const userRes = await Client.findByIdAndUpdate( { _id: id }, { $set: { 
     updatedAt: Date.now(),
     trader: newTrader._id
-  }}, { new: true }).populate('trader').populate('scripts');
+  }}, { new: true });
+
+  console.log(userRes)
+  console.log(trader)
   const user = userRes.toObject();
 
   if (!user) {
