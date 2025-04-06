@@ -18,11 +18,8 @@ console.log(process.env.NODE_ENV)
 connectDB()
 
 app.use(logger)
-
 app.use(cors(corsOptions))
-
 app.use(express.json())
-
 app.use(cookieParser())
 
 app.get('/privacy-policy', (req, res) => {
@@ -57,6 +54,7 @@ app.use(verifyJWT);
 app.use('/api/account', require('./routes/accountRoutes'));
 app.use('/api/register', require('./routes/registerRoutes'));
 app.use('/api/clients', require('./routes/clientRoutes'));
+app.use('/api/investments', require('./routes/investmentRoutes'));
 app.use('/api/scripts', require('./routes/scriptsRoutes'));
 app.use('/api/admins', require('./routes/adminRoutes'));
 

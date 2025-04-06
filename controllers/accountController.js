@@ -4,13 +4,25 @@ const bcrypt = require('bcrypt');
 
 const accountDetails = async (req, res) => {
   const email = req.client.email;
-  const client = await Client.findOne({ email }).select(['-password', '-createdAt', '-updatedAt', '-actions', '-active']).lean(); // Prevent picking password-field
+  const client = await Client.findOne({ email }).select(['-password', '-createdAt', '-updatedAt', '-actions', '-active'])
+    //.lean()
+    .populate("trader")
+    .populate("scripts"); // Prevent picking password-field
+
+  //console.log(client.scripts)
+  const resClient = {... client.toObject(), scripts: client.scripts.map(script => {
+    script.list = script.list.filter(p => p[0] < Date.now());
+
+    //console.log(script.list);
+    return script;
+  })};
+  //console.log(resClient);
 
   if(!client) {
     res.status(404).json({ message: 'Невозможно найти пользователя с такой почтой: ' + email })
   }
 
-  res.json(client);
+  res.json(resClient);
 }
 
 const updateAccount = async (req, res) => {
